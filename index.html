@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1>Cole The Great(artist formerly known as Cole)</h1>
+  <div>
+    <nav class='navbar' >
+      <h1>Latitude</h1>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Plots</a>
+        </li>
+        <li>
+          <a href="#">Comparison</a>
+        </li>
+        <li>
+          <a href="#">Data</a>
+        </li>
 
-  <img src="https://vignette.wikia.nocookie.net/sonic/images/c/c8/Tim_Curry.jpg/revision/latest?cb=20111110120542" alt="Doug Time">
+        <select id= "nav-select">
+          <option value="Plot 1">Plot 1</option>
+          <option value="Plot 2">Plot 2</option>
+          <option value="Plot 3">Plot 3</option>
+          <option value="Plot 4">Plot 4</option>
+        </select>
+        <div class="clearfix"></div>
+      </nav>
+    </ul>
+ <section>    
 
-  <p>Cole is ultimate, Cole is power.</p>
-  <p>You would do well to praise him.</p>
+</section> 
 
-  <ol>
-    <li><strong>Email:</strong> <a href="#">hotcity@hotcity.org</a></li>
-    <li><strong>Github:</strong> <a href="#">BigOlC</a></li>
-    <li><strong>Twitter:</strong> <a href="#">Twitter is heresy</a></li>
-  </ol>
 
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Favorite Weapon</th>
-    </tr>
-    <tr>
-      <td>The Road to Serfdom</td>
-      <td>Total Recall</td>
-      <td>Salami Rifle</td>
-    </tr>
-    <tr>
-      <td>Special Providence</td>
-      <td>Baby Genius</td>
-      <td>Squirrel Launcher</td>
-    </tr>
-    <tr>
-      <td>Sapiens</td>
-      <td>Zorro</td>
-      <td>Child Cannon</td>
-    </tr>
-  </table>
+  <div class= "container-fliud">
+    <div class ="row">
+      <div class= "col-sm-6 col-md-6 col-lg-6">
+        <p>Summary: Latitude vs. X</p>
+      <img src="C:\Users\cfing\Cole-GWU-Homework\11-Web\02-Case-Assignments\Instructions\Resources\assets\images\Fig1.png" alt="Your Name" width= 500px height= 500px>
 
-  <!-- Bonus link to last class page -->
-  <a href="../../../../1/Activities/04-Stu_MyFirst_HTML/Solved/my-first-bonus.html">My First HTML Bonus</a>
+      </div>
+    
+   <div  class = 'col-sm-6 col-md-6 col-lg-6' id= "viz">
+      <p>Vizualizations</p>
+      <img src="C:\Users\cfing\Cole-GWU-Homework\11-Web\02-Case-Assignments\Instructions\Resources\assets\images\Fig1.png" alt="Your Name" width = 250px height= 250px>
+      <img src="C:\Users\cfing\Cole-GWU-Homework\11-Web\02-Case-Assignments\Instructions\Resources\assets\images\Fig2.png" alt="Your Name" width = 250px height= 250px>
+      <img src="C:\Users\cfing\Cole-GWU-Homework\11-Web\02-Case-Assignments\Instructions\Resources\assets\images\Fig3.png" alt="Your Name" width = 250px height= 250px>
+      <img src="C:\Users\cfing\Cole-GWU-Homework\11-Web\02-Case-Assignments\Instructions\Resources\assets\images\Fig4.png" alt="Your Name" width = 250px height= 250px>
+      
+      </div>
+    </div>
+  </div>     
 
 </body>
-
 </html>
