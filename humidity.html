@@ -8,8 +8,7 @@
 <body>
 
   <div>
-    
-     <nav class='navbar' >
+    <nav class='navbar' >
       <h1>Latitude</h1>
       <ul>
         <li>
@@ -21,25 +20,53 @@
         <li>
           <a href="https://cfingerut.github.io/data">Data</a>
         </li>
-
-        <select id= "nav-select">
-          <option selected disabled>Vizualizations</option>
-          <option value="maxtemp.html">Latitude vs. Max Temperature</option>
-          <option value="humidity.html">Latitude vs. Humidity</option>
-          <option value="cloudiness.html">Latitude vs. Cloudiness </option>
-          <option value="wind.html">Latitude vs. Wind Speed</option>
-        </select>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Plots⯆</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="https://cfingerut.github.io/maxtemp">Max Temperature</a>
+            <a href="https://cfingerut.github.io/humidity">Humidity</a>
+            <a href="https://cfingerut.github.io/cloudiness">Cloudiness</a>
+            <a href="https://cfingerut.github.io/wind">Wind Speed</a>
+          </div>
+        </div>
+        <script>
+        
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+        
         <div class="clearfix"></div>
       </nav>
     </ul>
-<div>
+    </div>
 
 
-<body>
-<h1>Figure 2: Stupid Scatter Plot</h1>
+<main>
+<h1 id ="analysis_head">Latitude vs. Humidity Comparison</h1>
     <img class= "single" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig2.png?raw=true" alt="Your Name">
 
-<p> This is where my observation and nalysis will go, it will be glorious</p>
-
+<p id = "analysis"> Euclid of Alexandria--not to be confused with that of Megara-- once called it "the plight of reasoned thought". 
+  Tim Curry famously opined "it is like a cruel gelatin". Queen Nefertiti once proclaimed it " as far from principled reason as Erriapus". 
+  What is this chastized object which draws the ire of the powerful and wise? You guessed it, humidity. More specifically, its relationship with latitude.
+  Humidity was discovered 68 million years ago by our long lost friends, the dinosaurs 
+  (shortly before their demise 65 million years ago, that is 3 million years after their discovery). Humidity is theorized to be of the underworld and has haunted many humans.
+  Some call it a curse, some call it a gift to remind us that not all sweat equally. Whether or not you agree with its intentions, it seems like humidity is here to stay. 
+</p>
+</main>
 </body>
 </html>

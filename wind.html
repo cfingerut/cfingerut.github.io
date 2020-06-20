@@ -8,7 +8,6 @@
 <body>
 
   <div>
-    
     <nav class='navbar' >
       <h1>Latitude</h1>
       <ul>
@@ -21,24 +20,54 @@
         <li>
           <a href="https://cfingerut.github.io/data">Data</a>
         </li>
-
-        <select id= "nav-select">
-          <option selected disabled>Vizualizations</option>
-          <option value="maxtemp.html">Latitude vs. Max Temperature</option>
-          <option value="humidity.html">Latitude vs. Humidity</option>
-          <option value="cloudiness.html">Latitude vs. Cloudiness </option>
-          <option value="wind.html">Latitude vs. Wind Speed</option>
-        </select>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Plots⯆</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="https://cfingerut.github.io/maxtemp">Max Temperature</a>
+            <a href="https://cfingerut.github.io/humidity">Humidity</a>
+            <a href="https://cfingerut.github.io/cloudiness">Cloudiness</a>
+            <a href="https://cfingerut.github.io/wind">Wind Speed</a>
+          </div>
+        </div>
+        <script>
+        
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+        
         <div class="clearfix"></div>
       </nav>
     </ul>
-  </div>
+    </div>
 
-<body>
-<h1>Figure 5: Latitude / Wind Speed Comparison</h1>
+  </body>
+
+  <main>
+<h1 id ="analysis_head">Latitude / Wind Speed Comparison</h1>
     <img class= "single" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig4.png?raw=true" alt="Your Name">
 
-<p> This is where my observation and snalysis will go, it will be glorious</p>
+<p id ="analysis"> Wind has become a controversial topic in many a social gaggle in the year 2020 AD. As shown by top 
+  wind analyst Gus T. Prevarication III and as highlighted in this graph, America has a lot to lose if it does not come 
+  to a consensus on the nature of wind's role in society. On one end, there are those that are not sure whether the phenomenon
+  is being caused by a monumentous "sucking" force, or if in fact the blustering is coming from a more controversial "blowing" force. 
+  On the other end, we have the neo-winders, who believe that wind is merely a construct and can mean many different things to different people (and animals). </p>
 
-</body>
+
+</main>
+
 </html>

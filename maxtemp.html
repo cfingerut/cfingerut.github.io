@@ -5,38 +5,63 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div>
-    <nav class='navbar' >
-      <h1>Latitude</h1>
-      <ul>
-        <li>
-          <a href="https://cfingerut.github.io/">Home</a>
-        </li>
-        <li>
-          <a href="https://cfingerut.github.io/comparisons">Comparison</a>
-        </li>
-        <li>
-          <a href="https://cfingerut.github.io/data">Data</a>
-        </li>
-
-        <select id= "nav-select">
-          <option selected disabled>Vizualizations</option>
-          <option value="maxtemp.html">Latitude vs. Max Temperature</option>
-          <option value="humidity.html">Latitude vs. Humidity</option>
-          <option value="cloudiness.html">Latitude vs. Cloudiness </option>
-          <option value="wind.html">Latitude vs. Wind Speed</option>
-        </select>
-        <div class="clearfix"></div>
-      </nav>
-    </ul>
+<div>
+  <nav class='navbar' >
+    <h1>Latitude</h1>
+    <ul>
+      <li>
+        <a href="https://cfingerut.github.io/">Home</a>
+      </li>
+      <li>
+        <a href="https://cfingerut.github.io/comparisons">Comparison</a>
+      </li>
+      <li>
+        <a href="https://cfingerut.github.io/data">Data</a>
+      </li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Plots⯆</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="https://cfingerut.github.io/maxtemp">Max Temperature</a>
+          <a href="https://cfingerut.github.io/humidity">Humidity</a>
+          <a href="https://cfingerut.github.io/cloudiness">Cloudiness</a>
+          <a href="https://cfingerut.github.io/wind">Wind Speed</a>
+        </div>
+      </div>
+      <script>
+      
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+      
+      <div class="clearfix"></div>
+    </nav>
+  </ul>
   </div>
+</body>
 
-<h1>Data on Maximum Temperature and Latitude</h1>
+<main>
+<h1 id ="analysis_head">Data on Maximum Temperature and Latitude</h1>
     <img  class= "single" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig1.png?raw=true" alt="Your Name">
 
-<p> This is where my observation and analysis will go, it will be glorious</p>
+<p id ="analysis"> Vizualizations like these come once in a lifetime, a real specimen.Notice the elegant earthbound curve in the amalgamation of data points.
+  <br>Feel the raw emotion behind every grid = true. Fleeting feelings of fascination furthering the frontier of thine fancy? 
+  Be troubled no more, dear (see: deer) friend. <br>You are not alone in your wonder for the opulence that is.....this vizualization. </p>
 
-</body>
+</main>
 </html>

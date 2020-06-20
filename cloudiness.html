@@ -8,7 +8,6 @@
 <body>
 
   <div>
-    
     <nav class='navbar' >
       <h1>Latitude</h1>
       <ul>
@@ -21,26 +20,50 @@
         <li>
           <a href="https://cfingerut.github.io/data">Data</a>
         </li>
-
-        <select id= "nav-select">
-          <option selected disabled>Vizualizations</option>
-          <option value="maxtemp.html">Latitude vs. Max Temperature</option>
-          <option value="humidity.html">Latitude vs. Humidity</option>
-          <option value="cloudiness.html">Latitude vs. Cloudiness </option>
-          <option value="wind.html">Latitude vs. Wind Speed</option>
-        </select>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Plots⯆</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="https://cfingerut.github.io/maxtemp">Max Temperature</a>
+            <a href="https://cfingerut.github.io/humidity">Humidity</a>
+            <a href="https://cfingerut.github.io/cloudiness">Cloudiness</a>
+            <a href="https://cfingerut.github.io/wind">Wind Speed</a>
+          </div>
+        </div>
+        <script>
+        
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+        
         <div class="clearfix"></div>
       </nav>
     </ul>
-<div>
+    </div>
+  </body>
 
-<body>
-
-<h2>Figure 3: Latitude / Cloudiness Comparison</h2>
+<h1 id = "analysis_head">Latitude / Cloudiness Comparison</h1>
 
   <img class= "single" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig3.png?raw=true" alt="Your Name">
 
-<p> This is where my observation and nalysis will go, it will be glorious</p>
+<p id= "analysis"> When looking at cloudiness, an industry tip is to look up. Clouds usually
+  form in the sky and contain many secrets including but not limited to: rebel bird colonies, owls, disgruntled carbon particles, and famous equestrians.
+  <br>Undoubtedly, this vizualization proves the assertion amongst academic and military scholars that clouds have been increasing worldwide and can appear out of nowhere-- solidifying them as a  key national security threat to the United States.
+</p>
 
 </body>
 </html>

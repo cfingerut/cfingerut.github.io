@@ -9,7 +9,6 @@
 <body>
 
   <div>
-    
     <nav class='navbar' >
       <h1>Latitude</h1>
       <ul>
@@ -22,23 +21,41 @@
         <li>
           <a href="https://cfingerut.github.io/data">Data</a>
         </li>
-
-        <select id= "nav-select">
-          <option selected disabled>Vizualizations</option>
-          <option value="maxtemp.php">Latitude vs. Max Temperature</option>
-          <option value="humidity.php">Latitude vs. Humidity</option>
-          <option value="cloudiness.php">Latitude vs. Cloudiness </option>
-          <option value="wind.php">Latitude vs. Wind Speed</option>
-        </select>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Plots⯆</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="https://cfingerut.github.io/maxtemp">Max Temperature</a>
+            <a href="https://cfingerut.github.io/humidity">Humidity</a>
+            <a href="https://cfingerut.github.io/cloudiness">Cloudiness</a>
+            <a href="https://cfingerut.github.io/wind">Wind Speed</a>
+          </div>
+        </div>
+        <script>
+        
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+        
         <div class="clearfix"></div>
       </nav>
     </ul>
-      </ul>
-<div>
-<h1>Data Comparisons</h1>
-</div>
-
-<div>
+    </div>
+    
 <main>
 
 
@@ -49,13 +66,13 @@
   <div class= 'container_comp'>
   <div class="row">
     <div class='col-lg-6 col-sm-12'>
-      <p> Vs. Temperature</p>
+      <p id = "analysis_head"> Vs. Temperature</p>
       <img class= "viz1comp" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig1.png?raw=true" alt="Your Name" width = 350px height= 350px>
    
     </div>
   
     <div class='col-lg-6 col-sm-12'>
-      <p>Vs. Humidity</p>
+      <p id = "analysis_head">Vs. Humidity</p>
     <img class= "viz2comp" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig2.png?raw=true" alt="Your Name" width = 350px height= 350px>
    
      </div>  
@@ -65,7 +82,7 @@
 
     <div class= 'row'>
       <div class='col-lg-6 col-sm-12'> 
-        <p>Vs. Cloudiness</p>
+        <p id = "analysis_head">Vs. Cloudiness</p>
         <img class= "viz3comp" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig3.png?raw=true" alt="Your Name" width = 350px height= 350px>
         
 
@@ -73,7 +90,7 @@
     
     
       <div class='col-lg-6 col-sm-12'>
-        <p id="wind_speed">Vs. Wind Speed</p>
+        <p id = "analysis_head">Vs. Wind Speed</p>
     <img class= "viz4comp" src="https://github.com/cfingerut/cfingerut.github.io/blob/master/Images/Fig4.png?raw=true" alt="Your Name" width = 350px height= 350px>
 
       </div>
@@ -89,7 +106,9 @@
 </main>
 </div>
 
-<p> This is where my observation and analysis will go, it will be glorious</p>
+<p id= "analysis"> Trying to compare such viasges of honor would not only be poor form, but detrimental to th already regal feeling of this informative amalgamation of knowledge.
+  Bask in its light, feel its power. I will say this, such wizardry of graphical illumination should not be met with hesitation or intimidation, but with praise for its creator.Thank him, thank him often. 
+</p>
 
 </body>
 </html>
